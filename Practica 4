@@ -1,0 +1,39 @@
+use Consultorio
+select *
+from PacienteConsultorio
+select *
+from HistorialPaciente
+select *
+from Consultorio
+select *
+from ListadoMedicamentos
+
+insert into PacienteConsultorio
+values (NewId(), 'Jose Fernando Villareal')
+
+insert into PacienteConsultorio
+values (NewId(), 'Roberto Gonzalez Lopez')
+
+insert into PacienteConsultorio
+values (NewId(), 'Fernanda Rodriguez Cano')
+
+insert into HistorialPaciente
+values ('7FE3ED58-2F8A-4E46-A4CC-07D50E9E32FC', 'Alergica al pollo',NewId(),'Medicamento para alergia','Ronchas en la piel')
+
+insert into Consultorio
+values (1, 'Edificio A')
+
+insert into ListadoMedicamentos
+values (NewId(), 'Paracetamol','Medley 10 Tabletas Caja')
+insert into ListadoMedicamentos
+values (NewId(), 'Antiflu-Des','30 ML Solución Gotero Clorhidrato de amantadina 2.5 G')
+insert into ListadoMedicamentos
+values (NewId(), 'Panoto-S','100 ML Jarabe Frasco Hedera helix 0.7 G')
+
+
+
+
+delete from PacienteConsultorio 
+where IDPaciente= '56876691-E4FE-4B40-9A9F-4FBCA6D20674'
+update ListadoMedicamentos set DescripcionMedicamento = ' Medley 10 Tabletas Caja'  
+where IDMedicamento = '040241E9-B355-4599-A78C-46A1B7B67F8D'
