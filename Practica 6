@@ -1,0 +1,18 @@
+select PacienteConsultorio.IDPaciente,PacienteConsultorio.NomPaciente,HISTORIALPACIENTE.Descripcion
+
+FROM PacienteConsultorio
+
+INNER JOIN historialpaciente on PacienteConsultorio.IDPACIENTE = HISTORIALPACIENTE.idpaciente
+
+WHERE HISTORIALPACIENTE.Descripcion = 'Dolor de cabeza'
+
+
+
+select PacienteConsultorio.IDPaciente,PacienteConsultorio.NomPaciente,HISTORIALPACIENTE.Diagnostico
+
+FROM PacienteConsultorio
+
+INNER JOIN historialpaciente on PacienteConsultorio.IDPACIENTE = HISTORIALPACIENTE.idpaciente
+
+WHERE HISTORIALPACIENTE.Diagnostico = 'Migra�a'
+
