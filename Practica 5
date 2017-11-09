@@ -1,0 +1,55 @@
+
+use Consultorio
+select *
+from PacienteConsultorio
+select *
+from HistorialPaciente
+select *
+from Consultorio
+select *
+from ListadoMedicamentos
+
+insert into PacienteConsultorio
+values (NewId(), 'Jose Fernando Villareal')
+
+insert into PacienteConsultorio
+values (NewId(), 'Roberto Gonzalez Lopez')
+
+insert into PacienteConsultorio
+values (NewId(), 'Fernanda Rodriguez Cano')
+
+insert into PacienteConsultorio
+values (NewId(), 'Kevin Gonzalez Badillo')
+
+insert into PacienteConsultorio
+values (NewId(), 'Edith Rodriguez Briano')
+
+insert into PacienteConsultorio
+values (NewId(), 'Fernando Trevi�o Badillo')
+
+
+insert into HistorialPaciente
+values ('7FE3ED58-2F8A-4E46-A4CC-07D50E9E32FC', 'Alergica al pollo',NewId(),'Medicamento para alergia','Ronchas en la piel')
+insert into HistorialPaciente
+values ('60A228CC-9102-4243-9792-3D0E75F45E38', 'Alergico al polvo',NewId(),'Medicamento para alergia','Congestion nasal')
+insert into HistorialPaciente
+values ('CF6578FC-A23C-445F-B54C-4D251D382A51', 'Migra�a',NewId(),'Paracetamol','Dolor de cabeza')
+
+
+insert into Consultorio
+values (1, 'Edificio A')
+
+insert into ListadoMedicamentos
+values (NewId(), 'Paracetamol','Medley 10 Tabletas Caja')
+insert into ListadoMedicamentos
+values (NewId(), 'Antiflu-Des','30 ML Soluci�n Gotero Clorhidrato de amantadina 2.5 G')
+insert into ListadoMedicamentos
+values (NewId(), 'Panoto-S','100 ML Jarabe Frasco Hedera helix 0.7 G')
+
+
+
+
+delete from HistorialPaciente
+where IDHistorial= 'A83E4B24-E219-417E-A888-E6C52C35490D'
+update ListadoMedicamentos set DescripcionMedicamento = ' Medley 10 Tabletas Caja'  
+where IDMedicamento = '040241E9-B355-4599-A78C-46A1B7B67F8D'
